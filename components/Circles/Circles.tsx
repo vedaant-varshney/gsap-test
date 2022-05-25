@@ -1,4 +1,4 @@
-import { memo, useRef, useEffect } from "react";
+import { memo, useRef, useLayoutEffect, useEffect } from "react";
 import styles from './Circles.module.scss'
 import classnames from "classnames";
 
@@ -17,7 +17,7 @@ function Circles ({className} : Props) {
 
     useEffect(() => {
         timeline.current = gsap.timeline()
-        .from(circleBlue.current, {duration: 0.8, opacity: 0, x:40, ease: Power3.easeOut})
+        .from(circleBlue.current, {duration: 0.8,  opacity: 0, x:40, ease: Power3.easeOut})
         .from(circleRed.current, {duration: 0.8, opacity: 0, x:40, ease: Power3.easeOut, delay: 0.2})
         .from(circleYellow.current, {duration: 0.8, opacity: 0, x:40, ease: Power3.easeOut, delay: 0.4})
 //: /:ww
